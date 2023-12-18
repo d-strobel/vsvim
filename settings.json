@@ -1,0 +1,163 @@
+{
+    "workbench.startupEditor": "none",
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "explorer.confirmDragAndDrop": false,
+    "powershell.promptToUpdatePowerShell": false,
+    "redhat.telemetry.enabled": false,
+    "files.associations": {
+        "*.yml": "ansible",
+        "*.j2": "ansible-jinja",
+        "*.hcl": "hcl"
+    },
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/.trunk/*out": true
+    },
+    "trunk.trunkGrayOutNonBlockingIssues": false,
+    "files.watcherExclude": {
+        "**/.trunk/*out": true
+    },
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.trimTrailingWhitespace": true,
+    "svelte.enable-ts-plugin": false,
+    "update.showReleaseNotes": false,
+    "editor.lineNumbers": "relative",
+    "window.titleBarStyle": "custom",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["<C-h>"],
+            "commands": ["editor.action.triggerParameterHints"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>", "<tab>"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["revealInExplorer"]
+        },
+        {
+            "before": ["<leader>", "f", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "g", "s"],
+            "commands": ["workbench.view.scm"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<C-d>"],
+            "after": ["<C-d>", "z", "z"]
+        },
+        {
+            "before": ["<C-u>"],
+            "after": ["<C-u>", "z", "z"]
+        },
+        {
+            "before": ["<leader>", "<"],
+            "commands": ["editor.foldLevel1"]
+        },
+        {
+            "before": ["<leader>", ">"],
+            "commands": ["editor.unfoldAll"]
+        },
+        {
+            "before": ["<leader>", "d", "f"],
+            "commands": ["editor.action.formatDocument"]
+        },
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["<leader>", "g", "d"],
+            "commands": ["editor.action.revealDefinition"],
+            "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+        },
+        {
+            "before": ["<leader>", "g", "i"],
+            "command": "editor.action.goToImplementation",
+            "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+        },
+        {
+            "before": ["<leader>", "h"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": ["editor.action.triggerParameterHints"]
+        }
+    ],
+    "window.menuBarVisibility": "compact",
+    "vim.statusBarColorControl": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
+    },
+    "vim.leader": "<space>",
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [">"],
+            "commands": ["editor.action.indentLines"]
+        },
+        {
+            "before": ["<"],
+            "commands": ["editor.action.outdentLines"]
+        },
+        {
+            "before": ["J"],
+            "commands": ["editor.action.moveLinesDownAction"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.moveLinesUpAction"]
+        },
+        {
+            "before": ["<leader>", "c"],
+            "commands": ["editor.action.commentLine"]
+        },
+        {
+            "before": ["<C-a>"],
+            "commands": ["editor.action.changeAll"]
+        },
+        {
+            "before": ["<C-d>"],
+            "commands": ["editor.action.addSelectionToNextFindMatch"]
+        },
+        {
+            "before": ["<leader>", "d", "f"],
+            "commands": ["editor.action.formatSelection"]
+        }
+    ],
+    "extensions.ignoreRecommendations": true,
+    "go.toolsManagement.autoUpdate": false,
+    "editor.occurrencesHighlight": "off",
+    "accessibility.verbosity.terminal": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.hideOnStartup": "whenEmpty",
+    "go.terminal.activateEnvironment": false,
+    "git.terminalAuthentication": false,
+    "powershell.startAutomatically": false,
+    "powershell.integratedConsole.suppressStartupBanner": true,
+    "powershell.integratedConsole.showOnStartup": false,
+    "breadcrumbs.enabled": false,
+    "accessibility.verbosity.notebook": false,
+    "notebook.breadcrumbs.showCodeCells": false,
+    "notebook.dragAndDropEnabled": false,
+    "notebook.diff.enablePreview": false
+}
