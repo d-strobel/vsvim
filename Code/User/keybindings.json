@@ -2436,5 +2436,242 @@
         "key": "ctrl+alt+space",
         "command": "-toggleSuggestionFocus",
         "when": "suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "a",
+        "command": "git.stageAll",
+        "when": "view.workbench.scm.visible && listFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "git.unstageAll",
+        "when": "view.workbench.scm.visible && listFocus"
+    },
+    {
+        "key": "s",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "list.selectAndPreserveFocus",
+                "git.stage"
+            ]
+        },
+        "when": "listFocus && view.workbench.scm.visible"
+    },
+    {
+        "key": "u",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "list.selectAndPreserveFocus",
+                "git.unstage"
+            ]
+        },
+        "when": "listFocus && view.workbench.scm.visible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.nextMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "f3",
+        "command": "-editor.action.nextMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.previousMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+f3",
+        "command": "-editor.action.previousMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+z",
+        "command": "-undo"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "editor.action.replaceOne",
+        "when": "editorFocus && findWidgetVisible && replaceInputFocussed"
+    },
+    {
+        "key": "enter",
+        "command": "-editor.action.replaceOne",
+        "when": "editorFocus && findWidgetVisible && replaceInputFocussed"
+    },
+    {
+        "key": "ctrl+shift+1",
+        "command": "-editor.action.replaceOne",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-search.action.replaceAllInFolder",
+        "when": "folderMatchFocus && isEditableItem && replaceActive && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+1",
+        "command": "-search.action.replaceAllInFolder",
+        "when": "folderMatchFocus && isEditableItem && replaceActive && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "search.action.replaceAll",
+        "when": "editorFocus && findWidgetVisible && replaceInputFocussed"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "-search.action.replaceAll",
+        "when": "replaceActive && searchViewletVisible && !findWidgetVisible"
+    },
+    {
+        "key": "ctrl+shift+1",
+        "command": "-search.action.replace",
+        "when": "isEditableItem && matchFocus && replaceActive && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "-editor.action.replaceAll",
+        "when": "editorFocus && findWidgetVisible"
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "-workbench.view.search",
+        "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.navigateToLastEditLocation",
+        "when": "!editorFocus"
+    },
+    {
+        "key": "ctrl+shift+[Comma] ctrl+l",
+        "command": "-testing.debugLastRun"
+    },
+    {
+        "key": "ctrl+shift+[Comma] l",
+        "command": "-testing.reRunLastRun"
+    },
+    {
+        "key": "shift+alt+9",
+        "command": "-workbench.action.moveEditorToLastGroup"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "alt+0",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "end",
+        "command": "-list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+g",
+        "command": "-list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-notifications.focusLastToast",
+        "when": "notificationFocus && notificationToastsVisible"
+    },
+    {
+        "key": "pagedown",
+        "command": "-notifications.focusLastToast",
+        "when": "notificationFocus && notificationToastsVisible"
+    },
+    {
+        "key": "ctrl+numpad_add",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+shift+0",
+        "command": "-workbench.action.zoomIn"
+    },
+    {
+        "key": "ctrl+numpad_subtract",
+        "command": "-workbench.action.zoomOut"
+    },
+    {
+        "key": "ctrl+k ctrl+pageup",
+        "command": "-workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+k shift+enter",
+        "command": "-workbench.action.pinEditor",
+        "when": "!activeEditorIsPinned"
+    },
+    {
+        "key": "ctrl+k shift+enter",
+        "command": "-workbench.action.unpinEditor",
+        "when": "activeEditorIsPinned"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "search.focus.previousInputBox",
+        "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "-search.focus.previousInputBox",
+        "when": "inSearchEditor && inputBoxFocus || inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+    },
+    {
+        "key": "ctrl+shift+[Equal]",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
+    },
+    {
+        "key": "ctrl+shift+[Comma] ctrl+m",
+        "command": "-testing.openOutputPeek"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "explorer.openToSide",
+        "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!activeEditorGroupEmpty"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "-workbench.action.reopenClosedEditor"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+pagedown",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+pageup",
+        "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+k ctrl+m",
+        "command": "-workbench.action.toggleMaximizeEditorGroup",
+        "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+    },
+    {
+        "key": "ctrl+k z",
+        "command": "-workbench.action.toggleZenMode",
+        "when": "!isAuxiliaryWindowFocusedContext"
     }
 ]

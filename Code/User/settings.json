@@ -29,29 +29,43 @@
     "vim.insertModeKeyBindings": [
         {
             "before": ["<C-h>"],
-            "commands": ["editor.action.triggerParameterHints"]
+            "commands": ["editor.action.triggerParameterHints"],
+            "silent": true
         }
     ],
     "vim.normalModeKeyBindings": [
         {
+            "before": [":"],
+            "commands": [
+                "workbench.action.showCommands",
+            ],
+            "silent": true
+        },
+        {
             "before": ["<leader>", "<tab>"],
-            "commands": ["workbench.action.nextEditor"]
+            "commands": ["workbench.action.nextEditor"],
+            "silent": true
         },
         {
             "before": ["<leader>", "e"],
-            "commands": ["revealInExplorer"]
+            "commands": ["revealInExplorer"],
+            "silent": true
         },
         {
             "before": ["<leader>", "f", "f"],
-            "commands": ["workbench.action.quickOpen"]
+            "commands": ["workbench.action.quickOpen"],
+            "silent": true
         },
         {
             "before": ["<leader>", "g", "s"],
-            "commands": ["workbench.view.scm"]
+            "commands": ["workbench.scm.focus"],
+            "when": ["workbench.scm.active"],
+            "silent": true
         },
         {
             "before": ["<leader>", "t"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
+            "commands": ["workbench.action.toggleSidebarVisibility"],
+            "silent": true
         },
         {
             "before": ["<C-d>"],
@@ -63,42 +77,72 @@
         },
         {
             "before": ["<leader>", "<"],
-            "commands": ["editor.foldLevel1"]
+            "commands": ["editor.foldLevel1"],
+            "silent": true
         },
         {
             "before": ["<leader>", ">"],
-            "commands": ["editor.unfoldAll"]
+            "commands": ["editor.unfoldAll"],
+            "silent": true
         },
         {
             "before": ["<leader>", "d", "f"],
-            "commands": ["editor.action.formatDocument"]
+            "commands": ["editor.action.formatDocument"],
+            "silent": true
         },
         {
             "before": [">"],
-            "commands": ["editor.action.indentLines"]
+            "commands": ["editor.action.indentLines"],
+            "silent": true
         },
         {
             "before": ["<"],
-            "commands": ["editor.action.outdentLines"]
+            "commands": ["editor.action.outdentLines"],
+            "silent": true
         },
         {
             "before": ["<leader>", "g", "d"],
             "commands": ["editor.action.revealDefinition"],
-            "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+            "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor",
+            "silent": true
         },
         {
             "before": ["<leader>", "g", "i"],
             "command": "editor.action.goToImplementation",
-            "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor"
+            "when": "editorHasImplementationProvider && editorTextFocus && !isInEmbeddedEditor",
+            "silent": true
         },
         {
             "before": ["<leader>", "h"],
-            "commands": ["editor.action.showHover"]
+            "commands": ["editor.action.showHover"],
+            "silent": true
         },
         {
             "before": ["<C-h>"],
-            "commands": ["editor.action.triggerParameterHints"]
-        }
+            "commands": ["editor.action.triggerParameterHints"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.closeActiveEditor"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "r", "a"],
+            "commands": ["workbench.view.search"],
+            "when": "workbench.view.search.active && neverMatch =~ /doesNotMatch/",
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "y", "y"],
+            "commands": ["editor.action.clipboardCopyAction"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["editor.action.clipboardPasteAction"],
+            "silent": true
+        },
     ],
     "window.menuBarVisibility": "compact",
     "vim.statusBarColorControl": true,
@@ -113,35 +157,74 @@
     "vim.visualModeKeyBindings": [
         {
             "before": [">"],
-            "commands": ["editor.action.indentLines"]
+            "commands": ["editor.action.indentLines"],
+            "silent": true
         },
         {
             "before": ["<"],
-            "commands": ["editor.action.outdentLines"]
+            "commands": ["editor.action.outdentLines"],
+            "silent": true
         },
         {
             "before": ["J"],
-            "commands": ["editor.action.moveLinesDownAction"]
+            "commands": ["editor.action.moveLinesDownAction"],
+            "silent": true
         },
         {
             "before": ["K"],
-            "commands": ["editor.action.moveLinesUpAction"]
+            "commands": ["editor.action.moveLinesUpAction"],
+            "silent": true
         },
         {
             "before": ["<leader>", "c"],
-            "commands": ["editor.action.commentLine"]
+            "commands": ["editor.action.commentLine"],
+            "silent": true
         },
         {
             "before": ["<C-a>"],
-            "commands": ["editor.action.changeAll"]
+            "commands": ["editor.action.changeAll"],
+            "silent": true
         },
         {
             "before": ["<C-d>"],
-            "commands": ["editor.action.addSelectionToNextFindMatch"]
+            "commands": ["editor.action.addSelectionToNextFindMatch"],
+            "silent": true
         },
         {
             "before": ["<leader>", "d", "f"],
-            "commands": ["editor.action.formatSelection"]
+            "commands": ["editor.action.formatSelection"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "r", "r"],
+            "commands": ["editor.action.startFindReplaceAction"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "r", "a"],
+            "commands": ["workbench.view.search"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "y"],
+            "commands": ["editor.action.clipboardCopyAction", "cancelSelection"],
+            "silent": true
+        },
+        {
+            "before": ["<leader>", "p"],
+            "commands": ["editor.action.clipboardPasteAction", "cancelSelection", "extension.vim_escape"],
+            "silent": true
+        },
+        {
+            "before": [
+                "p",
+            ],
+            "after": [
+                "p",
+                "g",
+                "v",
+                "y"
+            ]
         }
     ],
     "extensions.ignoreRecommendations": true,
@@ -159,5 +242,6 @@
     "accessibility.verbosity.notebook": false,
     "notebook.breadcrumbs.showCodeCells": false,
     "notebook.dragAndDropEnabled": false,
-    "notebook.diff.enablePreview": false
+    "notebook.diff.enablePreview": false,
+    "workbench.activityBar.location": "hidden",
 }
